@@ -6,4 +6,14 @@
 
 .container {
   display: block;
+  margin: 10px;
+}
+
+body {
+  font-family: Roboto;
+  background-color: #E5E5E5;
+}
+
+* {
+  box-sizing: border-box;
 }

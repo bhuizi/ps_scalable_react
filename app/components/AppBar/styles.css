@@ -1,0 +1,33 @@
+.appBar { /* stylelint-disable */
+  background-color: #00afcc;
+  color: #fff;
+  display: flex;
+  font-size: 24px;
+  justify-content: space-between;
+  padding: 20px;
+  width: 100%;
+}
+
+.iconButton {
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.icon {
+  color: #fff;
+  font-size: 20px;
+}
+
+.icon:hover {
+  color: #E5E5E5;
+}
+
+.linkContainer {
+  font-size:16px;
+}
+
+.heading {
+  display: flex;
+  flex-grow: 2;
+  text-align: left;
+}
