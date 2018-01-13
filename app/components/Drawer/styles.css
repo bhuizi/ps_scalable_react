@@ -1,3 +1,27 @@
 .drawer { /* stylelint-disable */
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 10px, rgba(0, 0, 0, 0.22) 0px 3px 10px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  padding: 0;
+  transition: .25s ease-in-out;
+  z-index: 1000
+}
 
+.drawerOpen {
+  left: 0;
+}
+
+.item {
+  border-bottom: solid 1px #F6F6F6;
+  cursor: pointer;
+  padding: 25px;
+  text-transform: uppercase;
+}
+
+.item:hover {
+  background-color: #F6F6F6;
 }
