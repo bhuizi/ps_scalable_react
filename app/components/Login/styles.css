@@ -42,3 +42,14 @@
     font-weight: 700;
   }
 }
+
+.errorMessage {
+  color: #cd1313;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inputError {
+  border-bottom-color: #cd1313;
+}
