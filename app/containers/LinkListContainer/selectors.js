@@ -1,5 +1,5 @@
 import { createSelector } from 'reselect';
-import selectNavigationContainer from 'containers/NavigationContainer/selectors.js';
+import selectNavigationContainer from 'containers/NavigationContainer/selectors';
 /**
  * Direct selector to the linkListContainer state domain
  */
