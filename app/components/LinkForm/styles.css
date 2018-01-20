@@ -1,0 +1,56 @@
+
+.linkForm { /* stylelint-disable */
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px;
+  margin: 100px auto;
+  padding: 25px;
+  width: 320px;
+}
+
+.heading {
+  font-size: 22px;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.input {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-size: 18px;
+  padding: 5px;
+  width: 100%;
+}
+
+.actionContainer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 25px;
+}
+
+.button {
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+  color: #00afcc;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    font-weight: 700;
+  }
+}
+
+.errorMessage {
+  color: #cd1313;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inputError {
+  border-bottom-color: #cd1313;
+}
