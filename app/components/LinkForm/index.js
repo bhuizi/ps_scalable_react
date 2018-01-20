@@ -17,26 +17,28 @@ class LinkForm extends React.Component { // eslint-disable-line react/prefer-sta
   state = {};
   render() {
     return (
-      <div className={styles.linkForm}>
-        <div className={styles.heading}>
-          Add a link
-        </div>
-        <input
-          className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
-          type="text"
-          placeholder="url"
-          ref={(f) => { this.urlField = f; }}
-        />
-        <input
-          className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
-          type="text"
-          placeholder="description"
-          ref={(f) => { this.descriptionField = f; }}
-        />
-        <div className={styles.actionContainer}>
-          <button className={styles.button} onClick={this.props.cancelLogin}>
-          cancel</button>
-          <button className={styles.button} onClick={this.login}>login</button>
+      <div className={styles.overlay}>
+        <div className={styles.linkForm}>
+          <div className={styles.heading}>
+            Add a link
+          </div>
+          <input
+            className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
+            type="text"
+            placeholder="url"
+            ref={(f) => { this.urlField = f; }}
+          />
+          <input
+            className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
+            type="text"
+            placeholder="description"
+            ref={(f) => { this.descriptionField = f; }}
+          />
+          <div className={styles.actionContainer}>
+            <button className={styles.button} onClick={this.props.cancelLogin}>
+            cancel</button>
+            <button className={styles.button} onClick={this.login}>login</button>
+          </div>
         </div>
       </div>
     );
