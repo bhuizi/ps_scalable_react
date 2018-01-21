@@ -24,10 +24,12 @@ class LinkForm extends React.Component { // eslint-disable-line react/prefer-sta
           <TextInput
             className={styles.input}
             placeholder="URL"
+            ref={(f) => { this.urlField = f; }}
           />
           <TextInput
             className={styles.input}
             placeholder="Description"
+            ref={(f) => { this.descriptionField = f; }}
           />
           <div className={styles.actionContainer}>
             <button className={styles.button} onClick={this.props.cancelLogin}>
