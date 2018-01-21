@@ -5,14 +5,13 @@
 */
 
 import React from 'react';
-import classNames from 'classnames';
-
+import TextInput from 'components/TextInput';
 import styles from './styles.css';
 
 class LinkForm extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
-    login: React.PropTypes.func.isRequired,
-    cancelLogin: React.PropTypes.func.isRequired,
+    login: React.PropTypes.func,
+    cancelLogin: React.PropTypes.func,
   }
   state = {};
   render() {
@@ -22,17 +21,13 @@ class LinkForm extends React.Component { // eslint-disable-line react/prefer-sta
           <div className={styles.heading}>
             Add a link
           </div>
-          <input
-            className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
-            type="text"
-            placeholder="url"
-            ref={(f) => { this.urlField = f; }}
+          <TextInput
+            className={styles.input}
+            placeholder="URL"
           />
-          <input
-            className={classNames(styles.input, { [styles.inputError]: this.state.errorText })}
-            type="text"
-            placeholder="description"
-            ref={(f) => { this.descriptionField = f; }}
+          <TextInput
+            className={styles.input}
+            placeholder="Description"
           />
           <div className={styles.actionContainer}>
             <button className={styles.button} onClick={this.props.cancelLogin}>

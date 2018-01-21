@@ -1,0 +1,28 @@
+.input {
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  font-size: 18px;
+  padding: 5px;
+  width: 100%;
+
+  &:focus {
+    outlind: none;
+    border-bottom-color: #00AFCC;
+    border-bottom-width: 2px;
+  }
+}
+
+.errorMessage {
+  color: #CD1313;
+  font-size: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.inputError {
+  border-bottom-color: #CD1313;
+}
