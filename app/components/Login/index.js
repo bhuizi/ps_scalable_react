@@ -30,7 +30,6 @@ class Login extends React.Component { // eslint-disable-line react/prefer-statel
     this.props.login(email);
   }
   render() {
-
     return (
       <div className={styles.login}>
         <div className={styles.heading}>
