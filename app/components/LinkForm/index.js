@@ -10,10 +10,39 @@ import styles from './styles.css';
 
 class LinkForm extends React.Component { // eslint-disable-line react/prefer-stateless-function
   static propTypes = {
-    login: React.PropTypes.func,
-    cancelLogin: React.PropTypes.func,
+    addLink: React.PropTypes.func.isRequired,
   }
-  state = {};
+  state = {
+    urlError: '',
+    descriptionError: '',
+  };
+  onAdd = () => {
+    const url = this.url.value();
+    const description = this.description.value();
+    let urlError = null;
+    let descriptionError = null;
+    if (!url.match(/[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/)) {
+      urlError = 'Please provide a valid URL';
+    }
+
+    if (!description) {
+      descriptionError = 'Please provide a valid description';
+    }
+
+    this.setState({
+      urlError,
+      descriptionError,
+    });
+
+    if (urlError || descriptionError) {
+      return;
+    }
+    this.props.addLink({
+      url,
+      description,
+    });
+  };
+
   render() {
     return (
       <div className={styles.overlay}>
@@ -24,17 +53,19 @@ class LinkForm extends React.Component { // eslint-disable-line react/prefer-sta
           <TextInput
             className={styles.input}
             placeholder="URL"
-            ref={(f) => { this.urlField = f; }}
+            ref={(f) => { this.url = f; }}
+            errorText={this.state.urlError}
           />
           <TextInput
             className={styles.input}
             placeholder="Description"
-            ref={(f) => { this.descriptionField = f; }}
+            ref={(f) => { this.description = f; }}
+            errorText={this.state.descriptionError}
           />
           <div className={styles.actionContainer}>
-            <button className={styles.button} onClick={this.props.cancelLogin}>
+            <button className={styles.button}>
             cancel</button>
-            <button className={styles.button} onClick={this.login}>login</button>
+            <button className={styles.button} onClick={this.onAdd}>add</button>
           </div>
         </div>
       </div>
