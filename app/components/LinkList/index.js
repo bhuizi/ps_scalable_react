@@ -6,6 +6,7 @@
 
 import React from 'react';
 import Link from 'components/Link';
+import IconButton from 'components/IconButton';
 import styles from './styles.css';
 
 function LinkList({ links, topicName, children }) {
@@ -19,6 +20,11 @@ function LinkList({ links, topicName, children }) {
     <div className={styles.linkList}>
       <h1>{topicName}</h1>
       {linkNodes}
+      <IconButton
+        icon="plus"
+        buttonClass={styles.button}
+        iconClass={styles.icon}
+      />
       {children}
     </div>
   );
